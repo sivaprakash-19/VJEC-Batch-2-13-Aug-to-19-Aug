@@ -26,6 +26,15 @@ def printList(head) :
         print(head.data, end = ' ')
         head = head.next 
 
+# Printing Address of node before calling rest of LL and after calling rest of LL 
+def printList1(head) :
+    if head is None :
+        return 
+    print('Data of Node : ',head.data,  'address of current node : ', id(head))
+    printList1(head.next)
+    print('Data of Node : ',head.data,  'address of current node : ', id(head))
+
+
 head = buildList()
 printList(head)
 
